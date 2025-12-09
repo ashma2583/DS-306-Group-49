@@ -89,9 +89,7 @@ df[c(112, 352, 716, 805), ]
 ```
 We identified a few high-residual outliers, including a 63-year-old subject with testosterone levels of 1795. However, Cook's Distance analysis ($D < 0.1$) confirmed that these influential points did not significantly distort the model parameters, so they were retained to preserve sample integrity.
 
-
 ```{r}
-library(car)
 crPlots(model)
 ```
 
