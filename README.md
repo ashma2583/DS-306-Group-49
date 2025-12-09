@@ -26,9 +26,7 @@ The application allows users to visualize these relationships dynamically, provi
 
 ```text
 DS-306-Group-49/
-├── data/                       # Contains the cleaned NHANES dataset
-├── shinyapp/                   # Source code for the Shiny Web Application
-│   ├── app.R                   # Main application file (UI & Server)
+├── shiny.R                   # Main application file (UI & Server)
 ├── testosterone_data_analysis.Rmd # Focused analysis on testosterone variables
 ├── DS-306-Group-49.Rproj       # RStudio Project file
 └── README.md                   # Project documentation
