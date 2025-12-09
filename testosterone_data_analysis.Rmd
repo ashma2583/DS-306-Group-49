@@ -4,35 +4,30 @@ output: html_document
 ---
 
 ```{r}
-
-testosterone_health <- NHANES |>
-  filter(Gender == "male", !is.na(Testosterone)) |>
-  select(Testosterone, 
-         BPSysAve, BPDiaAve, Pulse, TotChol, # Cardio
-         BMI, Weight,                        # Body Comp
-         UrineFlow1,                         # Urine
-         HealthGen, Diabetes, PhysActive)    # General Health
-
-testosterone_health
+library(dplyr)
 
 ```
 
 
+### Data cleaning
 ```{r}
-cleaned_health_data <- testosterone_health |.
+df <- NHANES |>
+  filter(Gender == "male") |>
+  select(Testosterone, Age, 
+         BPSysAve, BPDiaAve, Pulse, TotChol,    # cardio
+         BMI,                                   # body composition               
+         UrineFlow1,                            # urine
+         Diabetes, PhysActive                   # general health
+         ) |>
   distinct() |>
   drop_na() |>
-  mutate(
-    HealthGen = factor(HealthGen, levels = c("Poor", "Fair", "Good", "Vgood", "Excellent"))
-  )
-
-print(dim(cleaned_health_data))
+  mutate(Diabetes = factor(Diabetes))
 ```
 
 
+### Model
 ```{r}
-model <- lm(Testosterone ~ ., data = cleaned_health_data)
-summary(model)
+model <- lm(Testosterone ~ Age + BPSysAve + BPDiaAve + Pulse + TotChol + BMI + UrineFlow1 + Diabetes + PhysActive, data = final_data)
+summary(corrected_model)
 ```
-
 
