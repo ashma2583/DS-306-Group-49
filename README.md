@@ -1,11 +1,11 @@
 # Correlation Between Testosterone and Health Indicators
 
-**DS-306 End-of-Semester Project | Group 49**
+**DATASCI 306 Final Project | Group 49**
 
 **Authors:** Pengzhe Lin, Mihir Barlinge, Ashton Ma
 
 ## 📌 Project Overview
-This interactive web application explores the relationship between **testosterone levels** and various cardiovascular, metabolic, and renal health indicators among adult males. Using data from the **National Health and Nutrition Examination Survey (NHANES)**, the project aims to identify how everyday health metrics—such as BMI, resting pulse, and urine flow—correlate with hormonal balance.
+This interactive web application explores the relationship between **testosterone levels** and various cardiovascular, metabolic, and renal health indicators among adult males. Using data from the **National Health and Nutrition Examination Survey (NHANES)**, the project aims to identify how everyday health metrics such as BMI, resting pulse, and urine flow correlate with testosterone.
 
 The application allows users to visualize these relationships dynamically, providing statistical context through regression analysis and correlation metrics.
 
@@ -46,7 +46,7 @@ git clone [https://github.com/ashma2583/DS-306-Group-49.git](https://github.com/
 Open RStudio and navigate to and open the project.
 In the console, run:
 ```{r}
-install.packages(c("shiny", "tidyverse", "ggplot2", "dplyr", "car", "gridExtra"))
+install.packages(c("shiny", "tidyverse", "ggplot2", "dplyr", "broom"))
 shiny::runApp("shinyapp")
 ```
 
