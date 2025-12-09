@@ -1,0 +1,38 @@
+---
+title: "testosterone_data_analysis"
+output: html_document
+---
+
+```{r}
+
+testosterone_health <- NHANES |>
+  filter(Gender == "male", !is.na(Testosterone)) |>
+  select(Testosterone, 
+         BPSysAve, BPDiaAve, Pulse, TotChol, # Cardio
+         BMI, Weight,                        # Body Comp
+         UrineFlow1,                         # Urine
+         HealthGen, Diabetes, PhysActive)    # General Health
+
+testosterone_health
+
+```
+
+
+```{r}
+cleaned_health_data <- testosterone_health |.
+  distinct() |>
+  drop_na() |>
+  mutate(
+    HealthGen = factor(HealthGen, levels = c("Poor", "Fair", "Good", "Vgood", "Excellent"))
+  )
+
+print(dim(cleaned_health_data))
+```
+
+
+```{r}
+model <- lm(Testosterone ~ ., data = cleaned_health_data)
+summary(model)
+```
+
+

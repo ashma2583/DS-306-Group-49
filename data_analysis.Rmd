@@ -166,5 +166,7 @@ ggplot(df, aes(x = combined_screen_time, y = PHQ2_Score)) +
 ```
 
 
-
+```{r}
+t.test(combined_screen_time ~ PhysActive, data = df)
+```
 
