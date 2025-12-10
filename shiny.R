@@ -6,8 +6,9 @@
 library(shiny)
 library(ggplot2)
 library(dplyr)
+library(tidyr)
 library(broom)
-library(NHANES) # Ensure this package is installed
+library(NHANES)# Ensure this package is installed
 
 # ------------------------------------------------------------
 # 1. GLOBAL DATA PROCESSING
