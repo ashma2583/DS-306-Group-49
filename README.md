@@ -27,6 +27,7 @@ The application allows users to visualize these relationships dynamically, provi
 ```text
 DS-306-Group-49/
 ├── shiny.R                   # Main application file (UI & Server)
+├── app.R                     # Application file used for deployment
 ├── testosterone_data_analysis.Rmd # Focused analysis on testosterone variables
 ├── DS-306-Group-49.Rproj       # RStudio Project file
 └── README.md                   # Project documentation
