@@ -59,7 +59,7 @@ ui <- fluidPage(
                                      "Pulse" = "Pulse",
                                      "Cholesterol" = "TotChol",
                                      "Urine Flow" = "UrineFlow1"),
-                         selected = c("BPDiaAve", "Pulse", "UrineFlow1")),
+                         selected = c("BPSysAve", "BPDiaAve", "Pulse", "TotChol", "UrineFlow1")),
       
       checkboxGroupInput("controls", "Controls (Confounders):",
                          choices = c("Age" = "Age",
