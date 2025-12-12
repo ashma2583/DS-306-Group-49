@@ -5,9 +5,9 @@
 **Authors:** Pengzhe Lin, Mihir Barlinge, Ashton Ma
 
 ## 📌 Project Overview
-This interactive web application explores the relationship between **testosterone levels** and various cardiovascular, metabolic, and renal health indicators among adult males. Using data from the **National Health and Nutrition Examination Survey (NHANES)**, the project aims to identify how everyday health metrics such as BMI, resting pulse, and urine flow correlate with testosterone.
+This interactive web application investigates the relationship between **testosterone levels** and various cardiovascular, metabolic, and renal health indicators among adult males. The project seeks to determine the relationship between testosterone and common health metrics like BMI, resting pulse, and urine flow using data from the **National Health and Nutrition Examination Survey (NHANES)**.
 
-The application allows users to visualize these relationships dynamically, providing statistical context through regression analysis and correlation metrics.
+The application allows users to dynamically visualize these relationships, providing statistical context through regression analysis and correlation metrics.
 
 ### Key Findings
 * **BMI is the Strongest Predictor:** Body Mass Index (BMI) showed the most significant negative association with testosterone levels ($t = -8.99, p < 2e^{-16}$), suggesting that higher body mass is strongly linked to lower hormonal levels.
@@ -15,7 +15,7 @@ The application allows users to visualize these relationships dynamically, provi
     * **Diastolic Blood Pressure:** Interestingly, higher diastolic blood pressure showed a positive correlation with testosterone levels ($p \approx 0.0015$).
 * **Renal Function:** Urine flow rate (`UrineFlow1`) remained a significant positive predictor ($p \approx 0.004$), reinforcing the link between renal health and testosterone.
 * **Non-Significant Factors:** When controlling for the above health metrics, **Age**, **Systolic Blood Pressure**, and **Diabetes** status were not found to be statistically significant predictors in this specific model.
-* **Model Variance:** The combined health indicators explain approximately **11% of the variance** in testosterone levels ($R^2 = 0.1108$), indicating that while these physical health markers are important, testosterone levels are likely influenced by a complex array of other unmeasured factors.
+* **Model Variance:** The combined health indicators explain approximately **11% of the variance** in testosterone levels ($R^2 = 0.1108$), indicating that while these physical health markers are important, testosterone levels are likely influenced by other unmeasured factors.
 
 ## 🔗 Live Application
 **[Click here to view the interactive app]( https://ashtonma.shinyapps.io/ds306group49/)**
